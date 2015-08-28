@@ -1,6 +1,7 @@
 class Api::V1::QuestionsController < ApplicationController
 
   before_action :authorize
+  
   def index
     render json: Question.all 
   end
