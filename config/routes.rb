@@ -1,14 +1,13 @@
 Rails.application.routes.draw do
 
-  get 'sessions/new'
+  root to: 'questions#index'
 
-  get 'sessions/create'
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
 
-  get 'sessions/destroy'
-
-  get 'user/new'
-
-  get 'user/create'
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
 
   namespace :api, defaults: {format: 'json'} do 
     namespace :v1 do 
