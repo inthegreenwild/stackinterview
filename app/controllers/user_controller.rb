@@ -3,7 +3,9 @@ class UserController < ApplicationController
   end
 
   def create
+    @uuid = SecureRandom.uuid 
   	@user = User.new(user_params)
+    @user.api_key = @uuid 
   	if @user.save
   		session[:user_id] = @user.id 
   		redirect_to '/'
