@@ -2,6 +2,7 @@ class Api::V1::QuestionsController < ApplicationController
 
   before_action :authenticate_key 
 
+  
   def index
     render json: Question.all 
   end
@@ -32,7 +33,7 @@ class Api::V1::QuestionsController < ApplicationController
     def authenticate_key
       api_key = request.headers['X-Api-Key']
 
-      head status: 403 unless User.exists?(:api_key => api_key || api_key_body)
+      head status: 403 unless User.exists?(:api_key => api_key)
     end 
 
 end
