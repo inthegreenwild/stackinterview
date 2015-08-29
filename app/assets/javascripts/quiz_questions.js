@@ -50,13 +50,13 @@ app.collectionView = Backbone.View.extend({
 		var collection = this.collection.models; 
 
 		//loop through all models and render
-		for (var model in collection) {
+		
 			// no variable declared for memory purposes -- faster 
 			new app.modelView({
 				el: $('#quiz-list'),
-				model: collection[model]
+				model: collection[1]
 			}); 
-		}
+		
 	}
 });
 

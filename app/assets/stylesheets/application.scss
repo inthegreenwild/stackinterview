@@ -11,6 +11,17 @@
  * file per style scope.
  *
  *= require_tree .
- *= require_self
+ *= require normalize
  *= require skeleton
+ *= require_self
  */
+
+body {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+#container {
+	width: 80%;
+	margin: 25px auto 0 auto;
+}

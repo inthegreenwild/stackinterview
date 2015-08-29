@@ -2,21 +2,36 @@
   <div id="title" class="row">
 		<%%= title %>  
 	</div> 
-	 	<ul>
-	 		<li> 
-	 			<%%= answer %>
-	 		</li> 
-	 	</ul>
-	<div id="about">
-	  	<%%= rating %>
-	  	<%%= category %>
-	</div>
+	<div class="row">
+	 	<ul id="choices">
+			<li class="choices"><%%=answer%> this is a super long answer to test the layout</li>
+			<li class="choices"><%%=answer%> this is a answer </li>
+			<li class="choices"><%%=answer%> this is a super long answer to test the layout even moreso </li>
+		</ul>
+	</div> 
+
   
 </script>
 
-<h1>Quiz API</h1>
-<hr>
+	<!-- <div id="about">
+	  	<%%= rating %>
+	</div> -->  
+
+<header class="row">
+	<!-- buttons to change question filter--> 
+	<ul id="buttons" class="twelve columns">
+		<li id="front-end">[ ]</li>
+		<li id="back-end">[ ]</li>
+		<li id="full-stack">[ ]</li>
+		<li id="right">[ ]</li>
+		<li id="wrong">[ ]</li>
+	</ul>
+</header>
 
 <section id='quiz-list'>
 
 </section>
+
+<footer class="row">
+	<div id="skip">skip</div>
+</footer>
