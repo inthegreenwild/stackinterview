@@ -1,17 +1,22 @@
 <script type="text/template" id='quiz-template'>
-  <li>
-  	<%%= title %>
-  	<%%= answer %>
-  	<%%= rating %>
-  	<%%= category %>
-  	<%%= id %>
-  </li> 
+  <div id="title" class="row">
+		<%%= title %>  
+	</div> 
+	 	<ul>
+	 		<li> 
+	 			<%%= answer %>
+	 		</li> 
+	 	</ul>
+	<div id="about">
+	  	<%%= rating %>
+	  	<%%= category %>
+	</div>
+  
 </script>
 
 <h1>Quiz API</h1>
 <hr>
 
-<ul id='quiz-list'>
-  <li>question</li>
+<section id='quiz-list'>
 
-</ul>
+</section>

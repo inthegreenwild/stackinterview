@@ -22,8 +22,7 @@ app.modelView = Backbone.View.extend({
 		// every model view should have a model
 		// this.model
 		var tpl = $('#quiz-template').html();
-		this.template = _.template(tpl); 
-		console.log(this.template);
+		this.template = _.template(tpl);
 		this.render(); 
 
 	},
