@@ -54,7 +54,7 @@ app.collectionView = Backbone.View.extend({
 			// no variable declared for memory purposes -- faster 
 			new app.modelView({
 				el: $('#quiz-list'),
-				model: collection[1]
+				model: _.sample(collection)
 			}); 
 		
 	}
