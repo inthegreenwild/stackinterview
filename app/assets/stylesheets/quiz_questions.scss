@@ -9,7 +9,13 @@ body {
 li {
 	list-style: none;
 	text-align: center;
+}
 
+li img {
+	width: 40px;
+	height: 40px;
+	margin-right: 3px;
+	padding-top: 3px;
 }
 
 ul {
@@ -18,14 +24,11 @@ ul {
 
 ul#buttons li {
 	color: white;
-	background-color: tomato; 
-	width: 20px; 
-	display: inline-block;
-	padding: 0;
+	display: inline;
 }
 
 li#right {
-	margin-left: 50%;
+	margin-left: 40%;
 }
 
 #title {

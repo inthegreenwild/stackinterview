@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 38 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(0.501933,0,0,1.00387,-250.966,-129.505)">
+        <path d="M537.854,129.006L509.305,129.006C504.169,129.006 500,131.091 500,133.658L500,162.128C500,164.74 504.24,166.86 509.463,166.86L537.854,166.86L537.854,129.006Z" style="fill:rgb(220,99,115);"/>
+    </g>
+    <g transform="matrix(-0.501933,0,0,1.00387,288.966,-129.505)">
+        <path d="M537.854,129.006L509.463,129.006C504.24,129.006 500,131.126 500,133.738L500,162.128C500,164.74 504.24,166.86 509.463,166.86L537.854,166.86L537.854,129.006Z" style="fill:rgb(135,154,197);"/>
+    </g>
+    <g id="fullstack icon" transform="matrix(1,0,0,1.02257,-596.882,-135.585)">
+        <text x="601.008px" y="159.403px" style="font-family:Arial;font-size:31.298px;fill:rgb(135,154,197);">{</text>
+        <text x="611.461px" y="159.403px" style="font-family:Arial;font-size:31.298px;fill:rgb(166,166,166);"> </text>
+        <text x="620.156px" y="159.403px" style="font-family:Arial;font-size:31.298px;fill:rgb(209,73,91);">}</text>
+    </g>
+</svg>
