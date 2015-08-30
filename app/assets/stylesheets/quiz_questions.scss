@@ -23,6 +23,9 @@ $m-b: 10px;
 	float: right;
 }
 
+%text-trunc {
+	overflow: scroll;
+}
 
 body {
 	background-color: $color-body; 
@@ -64,6 +67,7 @@ li#full-stack {
 }
 
 #title {
+	@extend %text-trunc; 
 	font-size: 1.6rem;
 	text-align: center;
 	line-height: 1.5;
@@ -72,21 +76,21 @@ li#full-stack {
 	color: $color-blue;
 	min-height: 145px;
 	max-height: 160px;
-	overflow: scroll;
 }
 
 #choices {
+	@extend %text-trunc; 
 	max-height: 250px;
-	overflow: scroll;
 	margin-bottom: $m-b;
 	color: $color-default-text;
 }
 
 li.choices {
+	@extend %text-trunc; 
 	font-size: 1.6rem;
 	background-color: $color-green;
 	min-height: 30px;
-	overflow: hidden; 
+	max-height: 60px;
 	line-height: 1.4;
 	margin-bottom: $m-b; 
 	border-radius: 5px;
