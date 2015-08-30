@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-title answer rating category keyword 
+
 questions_list = [
 	[
 	  'Explain JavaScript closures', 
@@ -17,7 +17,7 @@ questions_list = [
 
 	[
 		"How would you compare two objects in JavaScript?",
-		"Compare the total number of properties and each of their values."
+		"Compare the total number of properties and each of their values.",
 		3,
 		"frontend",
 		"javascript"
@@ -137,7 +137,15 @@ questions_list = [
 
 	[
 		"What does an INNER JOIN do in SQL?",
-		"Combines the rows from two tables and create a result set containing records that are present in both the tables based on joining condition",
+		"Combines the rows from two tables and returns a set containing records that are present in both the tables based on joining condition",
+		3,
+		"backend",
+		"database"
+	],
+
+	[
+		"What does an OUTER JOIN do in SQL?",
+		"Combines the rows from two tables and returns matching rows from both tables as well as any unmatched tables from one (single) or both (full)",
 		3,
 		"backend",
 		"database"
@@ -152,3 +160,7 @@ questions_list = [
 	]
 
 ]
+
+questions_list.each do |title, answer, rating, category, keyword|
+	Question.create(title: title, answer: answer, rating: rating, category: category, keyword: keyword)
+end 
