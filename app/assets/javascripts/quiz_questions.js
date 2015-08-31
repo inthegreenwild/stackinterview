@@ -1,6 +1,12 @@
 var app = app || {}; 
 var active = active || {};
 
+ $.ajaxSetup({
+    beforeSend: function(xhr){
+      xhr.setRequestHeader('X-Api-Key', globalkey)
+    }
+  }); 
+
 // *** BLUEPRINTS ***
 app.model = Backbone.Model.extend({
 	defaults: {

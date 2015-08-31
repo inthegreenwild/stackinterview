@@ -4,12 +4,9 @@ class Api::V1::QuestionsController < ApplicationController
   
   def index
     @vars = request.query_parameters
-    puts '*******'
-    puts @vars['category']
-    puts '*******'
     @questions = Question.where(nil)
 
-    #implement valid user query filters for db 
+    #implement valid header query filters
     filtering_params(params).each do |key, value|
       @questions = @questions.public_send(key, value) if value.present?
     end    
@@ -35,20 +32,22 @@ class Api::V1::QuestionsController < ApplicationController
     # ActiveRecord Model.query(:api_key => @users_key)
     # if match, awesme do stuff
     # else 403
-
     @question = Question.find(params[:id])
     render json: @question.update(question_params)
   end
 
   private
+
     def question_params
-      params.permit(:title, :answer, :rating, :category, :id)
+      params.permit(:title, :answer, :rating, :category, :keyword, :id)
     end 
 
     def authenticate_key
       api_key = params[:api_key]
-
-      head status: 403 unless User.exists?(:api_key => api_key)
+      api_keyy = request.headers['X-Api-Key'] 
+      puts api_keyy
+      puts request.headers 
+      head status: 403 unless User.exists?(:api_key => api_keyy)
     end 
 
     def filtering_params(params)

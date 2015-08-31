@@ -1,3 +1,7 @@
+<%= javascript_tag do %> 
+	window.globalkey = "<%= ENV['API_KEY'] %>";
+<% end %>  
+
 <script type="text/template" id='quiz-template'>
   <div id="title" class="row">
 		<%%= title %>  
