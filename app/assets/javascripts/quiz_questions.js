@@ -27,10 +27,23 @@ app.modelView = Backbone.View.extend({
 
 	},
 	render: function() {
+		 var data = this.model.attributes; 
+	 this.$el.append(this.template(data)); 
+
+	}
+});
+
+app.choiceView = Backbone.View.extend({
+	initialize: function() {
+		var tpl = $('#quiz-choice-template').html();
+		this.template = _.template(tpl);
+		this.render();
+	},
+	render: function() {
 		var data = this.model.attributes; 
 		this.$el.append(this.template(data)); 
 	}
-});
+}); 
 
 app.collectionView = Backbone.View.extend({ 
 
@@ -48,6 +61,7 @@ app.collectionView = Backbone.View.extend({
 	},
 	render: function() {
 		var collection = this.collection.models; 
+		var choices = _.sample(collection, 3); 
 
 		//loop through all models and render
 		
@@ -56,6 +70,14 @@ app.collectionView = Backbone.View.extend({
 				el: $('#quiz-list'),
 				model: _.sample(collection)
 			}); 
+
+
+			for (choice in choices) {
+				new app.choiceView({
+					el: $('#quiz-list'),
+					model: choices[choice]
+				})
+		}
 		
 	}
 });

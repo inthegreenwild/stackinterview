@@ -1,21 +1,16 @@
 <script type="text/template" id='quiz-template'>
   <div id="title" class="row">
 		<%%= title %>  
-	</div> 
-	<div class="row">
-	 	<ul id="choices">
-			<li class="choices"><%%=answer%> this is a super long answer to test the layout</li>
-			<li class="choices"><%%=answer%> this is a answer </li>
-			<li class="choices"><%%=answer%> this is a super long answer to test the layout even moreso </li>
-		</ul>
-	</div> 
-
-  
+	</div>   
 </script>
 
-	<!-- <div id="about">
-	  	<%%= rating %>
-	</div> -->  
+<script type="text/template" id="quiz-choice-template">
+	<div class="row">
+	 	<ul id="choices">
+			<li class="choices"> <%%=answer%> </li>
+		</ul>
+	</div> 
+</script>
 
 <header class="row">
 	<!-- buttons to change question filter--> 
