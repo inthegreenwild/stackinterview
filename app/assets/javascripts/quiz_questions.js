@@ -27,22 +27,29 @@ app.modelView = Backbone.View.extend({
 
 	},
 	render: function() {
-		 var data = this.model.attributes; 
-	 this.$el.append(this.template(data)); 
+		var data = this.model.attributes; 
+	 	this.$el.prepend(this.template(data)); 
 
 	}
 });
 
 app.choiceView = Backbone.View.extend({
+
 	initialize: function() {
 		var tpl = $('#quiz-choice-template').html();
 		this.template = _.template(tpl);
 		this.render();
+
 	},
 	render: function() {
 		var data = this.model.attributes; 
 		this.$el.append(this.template(data)); 
-	}
+		
+	},
+
+	log: function() {
+						console.log(this);
+					}
 }); 
 
 app.collectionView = Backbone.View.extend({ 
@@ -56,7 +63,8 @@ app.collectionView = Backbone.View.extend({
 		//every collection view should have a collection 
 		//retrieve data from API 'all get' route
 		this.collection.fetch(); 
-		this.$el.html(''); //empty out any content inside el 
+
+		this.reset(); 
 
 	},
 	render: function() {
@@ -73,13 +81,27 @@ app.collectionView = Backbone.View.extend({
 
 
 			for (choice in choices) {
-				new app.choiceView({
-					el: $('#quiz-list'),
+				new app.choiceView({ 
+					events: {
+						'click': 'log'
+					},
+					el: $('#choicess'),
 					model: choices[choice]
 				})
 		}
 		
-	}
+	},
+
+	reset: function() {
+		var reset = '<div class="row choices-list"><ul id="choicess"></ul></div>'; 
+		this.$el.html(reset); //empty out any content inside el 
+	},
+
+	refresh: function() {
+		this.reset();
+		this.render(); 
+	},
+
 });
 
 // *** END BLUEPRINTS ***
@@ -87,10 +109,19 @@ app.collectionView = Backbone.View.extend({
 $(document).ready(function(event) {
 	
 	// instantiate collection + collection view
+	active.questionFilter = 'fullstack'; 
+
+	active.filter = function(option) {
+		active.questionFilter = option; 
+	}
+
 	active.collection = new app.collection(); 
 	active.collectionView = new app.collectionView({
 		collection: active.collection,
 		el: $('#quiz-list')
 	});
 	
+	$('#skip').on('click', function() {
+		active.collectionView.refresh(); 
+	}); 
 });	
