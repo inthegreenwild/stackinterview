@@ -21,7 +21,7 @@ class Api::V1::QuestionsController < ApplicationController
   end
 
   def update
-    @users_key = request.headers['api_key'] #params[:api_key]
+    @users_key = params[:api_key] #params[:api_key]
     # match the user's api key
     # ActiveRecord Model.query(:api_key => @users_key)
     # if match, awesme do stuff
@@ -37,9 +37,9 @@ class Api::V1::QuestionsController < ApplicationController
     end 
 
     def authenticate_key
-      #api_key = request.headers['X-Api-Key']
+      api_key = params[:api_key]
 
-      #head status: 403 unless User.exists?(:api_key => api_key)
+      head status: 403 unless User.exists?(:api_key => api_key)
     end 
 
 end
