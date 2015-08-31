@@ -1,10 +1,13 @@
 class Api::V1::QuestionsController < ApplicationController
 
-  before_action :authenticate_key 
-
+  before_action :authenticate_key
   
   def index
-    render json: Question.all 
+    @vars = request.query_parameters
+    puts '*******'
+    puts @vars['category']
+    puts '*******'
+    render json: Question.category(@vars['category'])
   end
 
   def show
