@@ -7,7 +7,14 @@ class Api::V1::QuestionsController < ApplicationController
     puts '*******'
     puts @vars['category']
     puts '*******'
-    render json: Question.category(@vars['category'])
+    @questions = Question.where(nil)
+
+    #implement valid user query filters for db 
+    filtering_params(params).each do |key, value|
+      @questions = @questions.public_send(key, value) if value.present?
+    end    
+    
+    render json: @questions  
   end
 
   def show
@@ -15,7 +22,6 @@ class Api::V1::QuestionsController < ApplicationController
   end
 
   def edit
-
   end
 
   def create
@@ -44,5 +50,9 @@ class Api::V1::QuestionsController < ApplicationController
 
       head status: 403 unless User.exists?(:api_key => api_key)
     end 
+
+    def filtering_params(params)
+      params.slice(:category, :keyword, :rating, :min_rating, :title_includes)
+    end
 
 end
