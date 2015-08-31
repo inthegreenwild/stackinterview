@@ -28,6 +28,7 @@ app.modelView = Backbone.View.extend({
 	},
 	render: function() {
 		var data = this.model.attributes; 
+		app.correctAnswer = this.model.get('answer');
 	 	this.$el.prepend(this.template(data)); 
 
 	}
@@ -47,9 +48,9 @@ app.choiceView = Backbone.View.extend({
 		
 	},
 
-	log: function() {
-						console.log(this);
-					}
+	log: (function(event) {
+					(console.log(event.currentTarget.innerHTML));
+			  })
 }); 
 
 app.collectionView = Backbone.View.extend({ 
@@ -68,28 +69,29 @@ app.collectionView = Backbone.View.extend({
 
 	},
 	render: function() {
-		var collection = this.collection.models; 
-		var choices = _.sample(collection, 3); 
+		var collection = this.collection.models;
+		var wrong = _.sample(collection, 3); 
+		var answer = wrong[Math.floor(Math.random() * 3)]; 
+
 
 		//loop through all models and render
 		
 			// no variable declared for memory purposes -- faster 
 			new app.modelView({
 				el: $('#quiz-list'),
-				model: _.sample(collection)
+				model: answer 
 			}); 
 
 
-			for (choice in choices) {
-				new app.choiceView({ 
+			for (choice in wrong) {
+				new app.choiceView({
 					events: {
-						'click': 'log'
+						'click li': 'log'
 					},
 					el: $('#choicess'),
-					model: choices[choice]
-				})
-		}
-		
+					model: wrong[choice],
+				});
+			};
 	},
 
 	reset: function() {
@@ -109,7 +111,22 @@ app.collectionView = Backbone.View.extend({
 $(document).ready(function(event) {
 	
 	// instantiate collection + collection view
-	active.questionFilter = 'fullstack'; 
+	active.questionFilter = 'fullstack';
+
+	$('#front-end').on('click', function() {
+		console.log('click');
+		active.questionFilter = 'frontend'; 
+	});
+
+	$('#back-end').on('click', function() {
+		console.log('click');
+		active.questionFilter = 'backend'; 
+	});
+
+	$('#full-stack').on('click', function() {
+		console.log('click');
+		active.questionFilter = 'full-stack'; 
+	});
 
 	active.filter = function(option) {
 		active.questionFilter = option; 
@@ -121,6 +138,8 @@ $(document).ready(function(event) {
 		el: $('#quiz-list')
 	});
 	
+
+
 	$('#skip').on('click', function() {
 		active.collectionView.refresh(); 
 	}); 
