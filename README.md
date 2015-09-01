@@ -8,8 +8,8 @@ This is an API that is constantly updated with the latest interview questions be
 
 Table of Contents
 =================
-- Intro
-- Installation 
+- [intro](#intro)
+- [Installation](#installation)
 - Quiz game 
 - API
   * authentication 
@@ -18,4 +18,10 @@ Table of Contents
   * sending data  
 - Technologies
 - TODO
+
+##Intro
+=== 
+
+## Installation
+=========
 
