@@ -1,6 +1,6 @@
 class Api::V1::QuestionsController < ApplicationController
 
-  before_action :authenticate_key
+  before_action :authenticate_key, except: [:index, :show]
   
   def index
     @vars = request.query_parameters
@@ -26,7 +26,7 @@ class Api::V1::QuestionsController < ApplicationController
     render json: @question 
   end
 
-  def update
+  def destroy
     @users_key = params[:api_key] #params[:api_key]
     # match the user's api key
     # ActiveRecord Model.query(:api_key => @users_key)
@@ -37,8 +37,8 @@ class Api::V1::QuestionsController < ApplicationController
   end
 
   def delete 
-    @question = Question.find(params[:chore][:id].to_i)
-    render json: @question.destroy 
+    @question = Question.find(params[:id])
+    @question.destroy 
   end 
 
   private
