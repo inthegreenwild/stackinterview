@@ -1,7 +1,6 @@
-Stack Interview
+Stack Interview /play flawless 
 ===============
-<img src="http://i.imgur.com/60VBQDL.png" align="right" margin="10px
-"> 
+<img src="http://i.imgur.com/60VBQDL.png" align="right" margin="10px" padding="10px"> 
 
 A RESTful API for web developer interview questions
 
@@ -14,7 +13,7 @@ Table of Contents
 - [Installation](#installation)
 - [Quiz game](#quiz-game)
 - [API](#api)
-  * [authentication](#authenticate)
+  * [authentication](#authentication)
   * [reference](#reference)
   * [retrieving data](#retrieving-data)
   * [sending data](#sending-data)
@@ -179,9 +178,11 @@ I chose rails over sinatra because it is the standard for RESTful APIs. More imp
 Time constraints have left the quiz game as more of a minimal demo display than a game. I only had a few days to work on this as a class project but hope to pursue it further once time permits. 
 
 ## Known Issues / Features To Be Added: 
-- The quiz game does not currently work properly. The only button that works is the skip button. 
-- I have been thinking of the best way to implement backbone views with the possible answers. Currently it does display the proper answer randomly sorted within one of the three choice views. 
-- I also need to add backbone filtering on the filter buttons.
-- I want to add animations and page transitioning for a better experience 
-- The score count needs to be implemented per session 
+
+ __The quiz game does not currently work properly. The only button that works is the skip button.__
+ 
+- [ ] Think of the best way to implement backbone views with the possible answers. Currently it does display the proper answer randomly sorted within one of the three choice views. 
+- [ ] Add backbone filtering on the filter buttons.
+- [ ] Add animations and page transitioning for a better experience 
+- [ ] The score count needs to be implemented per session 
 
