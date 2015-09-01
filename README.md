@@ -1,4 +1,4 @@
-:heart: :blue_heart: Stack Interview :blue_heart: :heart: 
+:heart: Stack Interview :blue_heart: 
 ===============
 <img src="http://i.imgur.com/60VBQDL.png" align="right" margin="10px" padding="10px"> 
 
