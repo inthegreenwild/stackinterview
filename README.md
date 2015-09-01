@@ -24,7 +24,7 @@ Table of Contents
 
 #links
 
-[link to hosted project](agile-temple-9405.herokuapp.com)
+[link to hosted project](http://agile-temple-9405.herokuapp.com)
 
 [wireframe](http://i.imgur.com/JcBVKwS.png)
 
