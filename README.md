@@ -51,7 +51,9 @@ As someone who will be looking for a job upon graduation very soon, I needed a w
 
 In order to visually display the API as an example I decided to make a quiz game. The icons at the top will filter the questions to display only certain stack-related questions. 
 
-<img src="http://i.imgur.com/3VGbVQA.png" width="100" height="100" align="left" vertical-align="middle"> frontend
+<img src="http://i.imgur.com/3VGbVQA.png" width="100" height="100" align="left" vertical-align="middle"> 
+
+frontend
 
 <img src="http://i.imgur.com/wCpAXGx.png" width="100" height="100" align="left"> backend
 
