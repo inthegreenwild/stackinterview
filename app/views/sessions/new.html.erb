@@ -5,6 +5,6 @@
 
 <%= form_tag login_path do %> 
 	Email: <%= email_field_tag :email, params[:email] %> <br>
-	Password: <%= password_field_tag :password, params[:password] %> <br> 
+	Password: <%= password_field_tag :password, params[:password] %><br> 
 	<%= submit_tag "Submit" %> <%= link_to 'not a member?', signup_path %> 
 <% end %> 

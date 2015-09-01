@@ -1,6 +1,6 @@
 var app = app || {}; 
 var active = active || {};
-
+//easy compatability with rails 
  $.ajaxSetup({
     beforeSend: function(xhr){
       xhr.setRequestHeader('X-Api-Key', globalkey)
@@ -41,26 +41,23 @@ app.modelView = Backbone.View.extend({
 });
 
 app.choiceView = Backbone.View.extend({
-
 	initialize: function() {
 		var tpl = $('#quiz-choice-template').html();
 		this.template = _.template(tpl);
 		this.render();
-
 	},
 	render: function() {
 		var data = this.model.attributes; 
 		this.$el.append(this.template(data)); 
 		
 	},
-
 	log: (function(event) {
 					(console.log(event.currentTarget.innerHTML));
-			  })
+	})
+
 }); 
 
 app.collectionView = Backbone.View.extend({ 
-
 	initialize: function() {
 		var that = this; 
 		//sync catches all CRUD actions
@@ -70,25 +67,18 @@ app.collectionView = Backbone.View.extend({
 		//every collection view should have a collection 
 		//retrieve data from API 'all get' route
 		this.collection.fetch(); 
-
 		this.reset(); 
-
 	},
 	render: function() {
 		var collection = this.collection.models;
 		var wrong = _.sample(collection, 3); 
 		var answer = wrong[Math.floor(Math.random() * 3)]; 
-
-
-		//loop through all models and render
-		
 			// no variable declared for memory purposes -- faster 
 			new app.modelView({
 				el: $('#quiz-list'),
 				model: answer 
 			}); 
-
-
+			// loop through possible choices 
 			for (choice in wrong) {
 				new app.choiceView({
 					events: {
@@ -104,7 +94,6 @@ app.collectionView = Backbone.View.extend({
 		var reset = '<div class="row choices-list"><ul id="choicess"></ul></div>'; 
 		this.$el.html(reset); //empty out any content inside el 
 	},
-
 	refresh: function() {
 		this.reset();
 		this.render(); 
@@ -133,7 +122,7 @@ $(document).ready(function(event) {
 		console.log('click');
 		active.questionFilter = 'full-stack'; 
 	});
-
+	//TODO: finish filter functions for stacks
 	active.filter = function(option) {
 		active.questionFilter = option; 
 	}
@@ -144,8 +133,6 @@ $(document).ready(function(event) {
 		el: $('#quiz-list')
 	});
 	
-
-
 	$('#skip').on('click', function() {
 		active.collectionView.refresh(); 
 	}); 

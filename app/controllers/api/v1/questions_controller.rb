@@ -27,11 +27,7 @@ class Api::V1::QuestionsController < ApplicationController
   end
 
   def destroy
-    @users_key = params[:api_key] #params[:api_key]
-    # match the user's api key
-    # ActiveRecord Model.query(:api_key => @users_key)
-    # if match, awesme do stuff
-    # else 403
+    @users_key = params[:api_key]
     @question = Question.find(params[:id])
     render json: @question.update(question_params)
   end
