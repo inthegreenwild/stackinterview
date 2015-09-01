@@ -3,7 +3,7 @@ Stack Interview
 <img src="http://i.imgur.com/60VBQDL.png" align="right" margin="10px
 "> 
 
-A RESTful API for developer interview questions
+A RESTful API for web developer interview questions
 
 This is an API that is constantly updated with the latest interview questions being asked by companies for front-end, back-end, and fullstack development jobs. It doubles as a quiz game on its own, allowing you to immediately test your knowledge. 
 
@@ -35,7 +35,7 @@ Table of Contents
 
 Stack Interview is an API for the latest front-end, back-end, and fullstack interview questions being asked by employers around the world. 
 
-As someone who will be looking for a job upon graduation very soon, I needed a way to quiz myself on important concepts and terms. I feel that this api and game will help reinforce things I've learned and reveal what I need to study further. There are so many new stacks, frameworks, and libraries popping up every week that it's hard to find a condensed source of core concepts to study. This project aims to ultimately encourage others to crowdsource a well-rounded pool of categorized information suitable for as many skill sets and skill levels as possible. 
+As someone who will be looking for a job upon graduation very soon, I needed a way to quiz myself on important concepts and terms. I feel that this api and game will help developers reinforce things they've learned and reveal what needs to be studied further. There are so many new stacks, frameworks, and libraries popping up every week that it's hard to find a condensed source of core concepts to study. This project aims to ultimately encourage others to crowdsource a well-rounded pool of categorized information suitable for as many skill sets and skill levels as possible. 
 
 
 # Installation
@@ -51,17 +51,13 @@ As someone who will be looking for a job upon graduation very soon, I needed a w
 
 In order to visually display the API as an example I decided to make a quiz game. The icons at the top will filter the questions to display only certain stack-related questions. 
 
-<img src="http://i.imgur.com/3VGbVQA.png" width="100" height="100" float="left"> 
+>NOTE: The game does not yet fully functional and only allows you to skip through the questions. Any other functionality shown below will be added future releases. 
 
-frontend
+<img src="http://i.imgur.com/3VGbVQA.png" width="90" height="90" float="left"> frontend
 
-<img src="http://i.imgur.com/wCpAXGx.png" width="100" height="100" float="left"> 
+<img src="http://i.imgur.com/wCpAXGx.png" width="90" height="90" float="left"> backend
 
-backend
-
-<img src="http://i.imgur.com/60VBQDL.png" width="100" height="100" float="left"> 
-
-fullstack
+<img src="http://i.imgur.com/60VBQDL.png" width="90" height="90" float="left"> fullstack
 
 # API
 
@@ -180,5 +176,12 @@ I chose rails over sinatra because it is the standard for RESTful APIs. More imp
 
 # TODO 
 
+Time constraints have left the quiz game as more of a minimal demo display than a game. I only had a few days to work on this as a class project but hope to pursue it further once time permits. 
 
+## Known Issues / Features To Be Added: 
+- The quiz game does not currently work properly. The only button that works is the skip button. 
+- I have been thinking of the best way to implement backbone views with the possible answers. Currently it does display the proper answer randomly sorted within one of the three choice views. 
+- I also need to add backbone filtering on the filter buttons.
+- I want to add animations and page transitioning for a better experience 
+- The score count needs to be implemented per session 
 
