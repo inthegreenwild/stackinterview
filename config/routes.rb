@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :quiz_questions, except: :destroy 
 
-  root to: 'api/v1/questions#index'
+  root to: 'quiz_questions#index'
 
   get '/signup' => 'users#new'
   post '/users' => 'users#create'

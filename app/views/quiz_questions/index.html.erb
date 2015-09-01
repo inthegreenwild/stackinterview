@@ -33,5 +33,12 @@
 </section>
 
 <footer class="row">
+	<div class="u-pull-left">
+	<% if current_user %>
+  		<%= current_user.name %> | <%= link_to "logout", logout_path %>
+<% else %>
+  <%= link_to 'login', login_path %> | <%= link_to 'signup', signup_path %>
+<% end %>
+</div>
 	<div id="skip" class="u-pull-right">skip</div>
 </footer>
