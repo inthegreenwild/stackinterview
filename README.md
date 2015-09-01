@@ -24,11 +24,11 @@ This is an API that is constantly updated with the latest interview questions be
 
 # :paperclip: links :paperclip:
 
-[link to hosted project](http://agile-temple-9405.herokuapp.com)
+[link to hosted project](httphttps://stack-interview.herokuapp.com/login)
 
 [wireframe](http://i.imgur.com/JcBVKwS.png)
 
-[user stories]()
+[user stories](/userstories.md)
 
 # :star2: Intro :star2:
 
@@ -68,7 +68,7 @@ The rest is pretty self-explanitory. Your score of right and wrong answers is at
 
 :lock: Stack Interview requires an API key for anything other than GET requests. 
 
-Getting an API key is super easy though! Just register an account and you will be redirected to it. The API supports both params and request headers 
+Getting an API key is super easy though! Just [register an account](https://stack-interview.herokuapp.com/signup) and you will be redirected to it. The API supports both params and request headers 
 
 ####Headers
 
