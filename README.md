@@ -1,9 +1,5 @@
 Stack Interview /play flawless 
 ===============
-
-/play flawless
-
-/play vuvuzela
 <img src="http://i.imgur.com/60VBQDL.png" align="right" margin="10px" padding="10px"> 
 
 A RESTful API for web developer interview questions
