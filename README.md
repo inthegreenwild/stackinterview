@@ -1,6 +1,6 @@
 Stack Interview
 ===============
-<img src="http://i.imgur.com/Hm5D13W.png" align="right"> 
+<img src="http://i.imgur.com/Hm5D13W.png" align="right" margin="5px"> 
 
 A RESTful API for developer interview questions
 
