@@ -1,4 +1,4 @@
-Stack Interview /play flawless 
+:heart: :blue_heart: Stack Interview :blue_heart: :heart: 
 ===============
 <img src="http://i.imgur.com/60VBQDL.png" align="right" margin="10px" padding="10px"> 
 
@@ -6,7 +6,7 @@ A RESTful API for web developer interview questions
 
 This is an API that is constantly updated with the latest interview questions being asked by companies for front-end, back-end, and fullstack development jobs. It doubles as a quiz game on its own, allowing you to immediately test your knowledge. 
 
-Table of Contents
+:notebook_with_decorative_cover: Table of Contents :notebook_with_decorative_cover:
 =================
 - [links](#links)
 - [intro](#intro)
@@ -22,7 +22,7 @@ Table of Contents
 
 =====
 
-#links
+# :paperclip: links :paperclip:
 
 [link to hosted project](http://agile-temple-9405.herokuapp.com)
 
@@ -37,7 +37,7 @@ Stack Interview is an API for the latest front-end, back-end, and fullstack inte
 As someone who will be looking for a job upon graduation very soon, I needed a way to quiz myself on important concepts and terms. I feel that this api and game will help developers reinforce things they've learned and reveal what needs to be studied further. There are so many new stacks, frameworks, and libraries popping up every week that it's hard to find a condensed source of core concepts to study. This project aims to ultimately encourage others to crowdsource a well-rounded pool of categorized information suitable for as many skill sets and skill levels as possible. 
 
 
-# Installation
+# :hourglass_flowing_sand: Installation :hourglass_flowing_sand:
 - fork or clone this repository down 
 - `bundle install` & `bundle` 
 - `rake db:create` & `rake db:migrate` & `rake db:seed` 
@@ -52,17 +52,21 @@ In order to visually display the API as an example I decided to make a quiz game
 
 >NOTE: The game does not yet fully functional and only allows you to skip through the questions. Any other functionality shown below will be added future releases. 
 
+Click on one of the filter icons to choose which category of questions to see: 
+
 <img src="http://i.imgur.com/3VGbVQA.png" width="90" height="90" float="left"> frontend
 
 <img src="http://i.imgur.com/wCpAXGx.png" width="90" height="90" float="left"> backend
 
 <img src="http://i.imgur.com/60VBQDL.png" width="90" height="90" float="left"> fullstack
 
+The rest is pretty self-explanitory. Your score of right and wrong answers is at the top right and on the bottom right you can skip the current question. Logging out will end the current game. 
+
 # API
 
 ## authentication
 
-Stack Interview requires an API key for anything other than GET requests. 
+:lock: Stack Interview requires an API key for anything other than GET requests. 
 
 Getting an API key is super easy though! Just register an account and you will be redirected to it. The API supports both params and request headers 
 
@@ -104,7 +108,7 @@ retrieve frontend questions related to javascript:
 
 ## sending data 
 
->__POST, PUT, PATCH, and DELETE require an API Key__
+> :lock: __POST, PUT, PATCH, and DELETE require an API Key__
 
 JavaScript example of sending a POST request: 
 
@@ -177,7 +181,7 @@ I chose rails over sinatra because it is the standard for RESTful APIs. More imp
 
 Time constraints have left the quiz game as more of a minimal demo display than a game. I only had a few days to work on this as a class project but hope to pursue it further once time permits. 
 
-## Known Issues / Features To Be Added: 
+## :rotating_light: Known Issues / Features To Be Added :rotating_light:
 
  __The quiz game does not currently work properly. The only button that works is the skip button.__
  
