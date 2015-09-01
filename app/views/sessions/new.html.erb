@@ -1,11 +1,10 @@
 <h1>login</h1>
-
 <% if @message %> 
 	<span><%= @message %></span>
 <% end %> 
 
 <%= form_tag login_path do %> 
-	Email: <%= text_field_tag :email, params[:email] %> 
-	Password: <%= password_field_tag :password, params[:password] %> 
-	<%= submit_tag "Submit" %> 
+	Email: <%= email_field_tag :email, params[:email] %> <br>
+	Password: <%= password_field_tag :password, params[:password] %> <br> 
+	<%= submit_tag "Submit" %> <%= link_to 'not a member?', signup_path %> 
 <% end %> 

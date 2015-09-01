@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     @user.api_key = @uuid 
   	if @user.save
   		session[:user_id] = @user.id 
-  		redirect_to '/'
+  		redirect_to '/home'
   	else 
   		flash[:error] = 'An error has occured :('
   		render 'new'

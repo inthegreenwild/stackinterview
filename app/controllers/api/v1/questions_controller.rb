@@ -36,6 +36,11 @@ class Api::V1::QuestionsController < ApplicationController
     render json: @question.update(question_params)
   end
 
+  def delete 
+    @question = Question.find(params[:chore][:id].to_i)
+    render json: @question.destroy 
+  end 
+
   private
 
     def question_params
@@ -43,11 +48,12 @@ class Api::V1::QuestionsController < ApplicationController
     end 
 
     def authenticate_key
-      api_key = params[:api_key]
-      api_keyy = request.headers['X-Api-Key'] 
-      puts api_keyy
-      puts request.headers 
-      head status: 403 unless User.exists?(:api_key => api_keyy)
+      if params[:api_key]
+        api_key = params[:api_key] 
+      else
+        api_key = request.headers['X-Api-Key']
+      end 
+      head status: 403 unless User.exists?(:api_key => api_key)
     end 
 
     def filtering_params(params)
