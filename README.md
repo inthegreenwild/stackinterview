@@ -10,18 +10,24 @@ Table of Contents
 =================
 - [intro](#intro)
 - [Installation](#installation)
-- Quiz game 
-- API
-  * authentication 
-  * reference
-  * retrieving data
-  * sending data  
-- Technologies
-- TODO
+- [Quiz game](#quiz-game)
+- [API](#api)
+  * [authentication](#authenticate)
+  * [reference](#reference)
+  * [retrieving data](#retrieving-data)
+  * [sending data](#sending-data)
+- [Technologies](#technologies)
+- [TODO](#todo)
 
 ##Intro
-=== 
 
 ## Installation
-=========
+- fork or clone this repository
+- bundle install & bundle 
+- rake db:create & migrate & seed 
+
+## Quiz Game
+In order to visually display the API as an example I decided to make a quiz game. 
+
+# Api 
 
