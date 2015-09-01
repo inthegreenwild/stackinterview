@@ -1,4 +1,5 @@
 class QuizQuestionsController < ApplicationController
+  before_action :authorize 
   def index
     @questions = Question.all 
   end

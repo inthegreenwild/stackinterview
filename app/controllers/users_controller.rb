@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authorize, only: :home
   def new
   end
 
@@ -14,6 +15,11 @@ class UsersController < ApplicationController
   		render 'new'
   	end 
   end
+
+  def home 
+    @user = User.find(session[:user_id])
+    @key = @user.api_key
+  end 
 
   private 
   	def user_params
