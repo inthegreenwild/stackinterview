@@ -8,6 +8,7 @@ This is an API that is constantly updated with the latest interview questions be
 
 Table of Contents
 =================
+- [links](#links)
 - [intro](#intro)
 - [Installation](#installation)
 - [Quiz game](#quiz-game)
@@ -19,15 +20,37 @@ Table of Contents
 - [Technologies](#technologies)
 - [TODO](#todo)
 
-##Intro
+=====
 
-## Installation
+#links
+
+[link to hosted project](agile-temple-9405.herokuapp.com)
+[wireframe](http://i.imgur.com/JcBVKwS.png)
+[user stories]()
+
+#Intro
+
+# Installation
 - fork or clone this repository
 - bundle install & bundle 
 - rake db:create & migrate & seed 
 
-## Quiz Game
+# Quiz Game
 In order to visually display the API as an example I decided to make a quiz game. 
 
 # Api 
+
+## authentication
+
+## reference 
+
+## retrieving data
+
+## sending data 
+
+# Technologies 
+
+# TODO 
+
+
 
