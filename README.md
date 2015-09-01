@@ -24,7 +24,7 @@ This is an API that is constantly updated with the latest interview questions be
 
 # :paperclip: links :paperclip:
 
-[link to hosted project](httphttps://stack-interview.herokuapp.com/login)
+[link to hosted project](https://stack-interview.herokuapp.com/login)
 
 [wireframe](http://i.imgur.com/JcBVKwS.png)
 
@@ -101,7 +101,7 @@ Filtering options
 | min_rating | retrieves only questions with this rating or greater | &rating=3 | 
 | title_includes | retrieve questions containing a certain word (ignores case) | &title_includes=javascript | 
 
-retrieve frontend questions related to javascript: 
+__retrieve frontend questions related to javascript:__ 
 
 `curl http://localhost:3000/api/v1/questions&api_key=yourkeyhere&category=frontend&keyword=javascript`
 
@@ -110,7 +110,7 @@ retrieve frontend questions related to javascript:
 
 > :lock: __POST, PUT, PATCH, and DELETE require an API Key__
 
-JavaScript example of sending a POST request: 
+__JavaScript example of sending a POST request:__ 
 
 ```javascript
  $.ajax({
@@ -133,7 +133,7 @@ JavaScript example of sending a POST request:
   })
 ```
 
-JavaScript example sending a PATCH request with API key in headers 
+__JavaScript example sending a PATCH request with API key in headers__ 
 
 ```js 
   $.ajax({
