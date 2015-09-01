@@ -30,7 +30,7 @@ This is an API that is constantly updated with the latest interview questions be
 
 [user stories]()
 
-#Intro
+# :star2: Intro :star2:
 
 Stack Interview is an API for the latest front-end, back-end, and fullstack interview questions being asked by employers around the world. 
 
@@ -44,7 +44,7 @@ As someone who will be looking for a job upon graduation very soon, I needed a w
 - `rails s`
 - create user through pg or signup page to get and use an api_key 
 
-# Quiz Game
+# :game_die: Quiz Game :game_die:
 
 <img src="http://i.imgur.com/LYl3pzy.png" width="396" height="605">
 
@@ -62,7 +62,7 @@ Click on one of the filter icons to choose which category of questions to see:
 
 The rest is pretty self-explanitory. Your score of right and wrong answers is at the top right and on the bottom right you can skip the current question. Logging out will end the current game. 
 
-# API
+# :gift: API :gift:
 
 ## authentication
 
@@ -159,7 +159,7 @@ JavaScript example sending a PATCH request with API key in headers
   })
 ```
 
-# Technologies 
+# :floppy_disk: Technologies :floppy_disk:
 
 Front-end: 
 - Sass
@@ -177,7 +177,7 @@ Notable gems:
 
 I chose rails over sinatra because it is the standard for RESTful APIs. More importantly, it has the ability to scale and mutate databases very easily out of the box. I know there will likely be multiple of this API so this felt like the right choice for a one-person operation. 
 
-# TODO 
+# :coffee: TODO :coffee: 
 
 Time constraints have left the quiz game as more of a minimal demo display than a game. I only had a few days to work on this as a class project but hope to pursue it further once time permits. 
 
