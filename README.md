@@ -177,7 +177,7 @@ Notable gems:
 
 I chose rails over sinatra because it is the standard for RESTful APIs. More importantly, it has the ability to scale and mutate databases very easily out of the box. I know there will likely be multiple of this API so this felt like the right choice for a one-person operation. 
 
-# TODO :coffee::coffee::coffee::coffee::coffee::coffee::coffee::coffee::coffee::coffee::coffee::coffee::coffee:
+# :coffee::coffee::coffee: TODO :coffee::coffee::coffee:
 
 Time constraints have left the quiz game as more of a minimal demo display than a game. I only had a few days to work on this as a class project but hope to pursue it further once time permits. 
 
