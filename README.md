@@ -32,7 +32,7 @@ This is an API that is constantly updated with the latest interview questions be
 
 # :star2: Intro :star2:
 
-Stack Interview is an API for the latest front-end, back-end, and fullstack interview questions being asked by employers around the world. 
+Stack Interview is an API for the latest front-end and back-end interview questions being asked by employers around the world. 
 
 As someone who will be looking for a job upon graduation very soon, I needed a way to quiz myself on important concepts and terms. I feel that this api and game will help developers reinforce things they've learned and reveal what needs to be studied further. There are so many new stacks, frameworks, and libraries popping up every week that it's hard to find a condensed source of core concepts to study. This project aims to ultimately encourage others to crowdsource a well-rounded pool of categorized information suitable for as many skill sets and skill levels as possible. 
 
@@ -50,7 +50,7 @@ As someone who will be looking for a job upon graduation very soon, I needed a w
 
 In order to visually display the API as an example I decided to make a quiz game. The icons at the top will filter the questions to display only certain stack-related questions. 
 
->NOTE: The game does not yet fully functional and only allows you to skip through the questions. Any other functionality shown below will be added future releases. 
+>NOTE: The game is not yet fully functional and only allows you to skip through the questions. Any other functionality shown below will be added in future releases. 
 
 Click on one of the filter icons to choose which category of questions to see: 
 
@@ -72,7 +72,7 @@ Getting an API key is super easy though! Just [register an account](https://stac
 
 ####Headers
 
-`curl -H 'api_token: your-api-key" http://localhost:3000/api/v1/questions`
+`curl -H 'X-API-Key: your-api-key" http://localhost:3000/api/v1/questions`
 
 ####Params
 
@@ -98,7 +98,7 @@ Filtering options
 | category | retrieve questions from this category | &category=frontend | 
 | keyword | retrieve questions with this keyword | &keyword=javascript | 
 | rating | retrieve only questions with specific rating | &rating=4 | 
-| min_rating | retrieves only questions with this rating or greater | &rating=3 | 
+| min_rating | retrieves only questions with this rating or greater | &min_rating=3 | 
 | title_includes | retrieve questions containing a certain word (ignores case) | &title_includes=javascript | 
 
 __retrieve frontend questions related to javascript:__ 
