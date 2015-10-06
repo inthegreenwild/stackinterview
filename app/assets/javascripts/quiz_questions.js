@@ -1,5 +1,6 @@
 var app = app || {}; 
 var active = active || {};
+active.apiEndpoint = '/api/v1/questions'; 
 //easy compatability with rails 
  $.ajaxSetup({
     beforeSend: function(xhr){
@@ -20,7 +21,9 @@ app.model = Backbone.Model.extend({
 app.collection = Backbone.Collection.extend({
 	model: app.model, //each item in the database is 
 									 //instantiated as a new one of these models blueprint
-	url: '/api/v1/questions'
+	url: function() {
+    return active.apiEndpoint;
+  }
 }); 
 
 app.modelView = Backbone.View.extend({
@@ -51,11 +54,15 @@ app.choiceView = Backbone.View.extend({
 		this.$el.append(this.template(data)); 
 		
 	},
-	log: (function(event) {
-					(console.log(event.currentTarget.innerHTML));
-	})
+	verify: (function(event) {
+		
+		if (event.currentTarget.innerHTML.trim() == app.correctAnswer) {
+			active.collectionView.refresh()
+			}
+		}
 
-}); 
+)
+});
 
 app.collectionView = Backbone.View.extend({ 
 	initialize: function() {
@@ -82,9 +89,16 @@ app.collectionView = Backbone.View.extend({
 			for (choice in wrong) {
 				new app.choiceView({
 					events: {
-						'click li': 'log'
+						'click li': 'verify'
 					},
 					el: $('#choicess'),
+					attributes : function () {
+    			// Return model data
+    				return {
+      			 id : this.collection.get( 'id' ),
+    				};
+  				},
+					
 					model: wrong[choice],
 				});
 			};
@@ -106,26 +120,27 @@ app.collectionView = Backbone.View.extend({
 $(document).ready(function(event) {
 	
 	// instantiate collection + collection view
-	active.questionFilter = 'fullstack';
 
 	$('#front-end').on('click', function() {
 		console.log('click');
-		active.questionFilter = 'frontend'; 
+		active.apiEndpoint = '/api/v1/questions/?category=frontend';
+		active.collectionView.collection.fetch(); 
+		active.collectionView.reset(); 
 	});
 
 	$('#back-end').on('click', function() {
 		console.log('click');
-		active.questionFilter = 'backend'; 
+		active.apiEndpoint = '/api/v1/questions//?category=backend'; 
+		active.collectionView.collection.fetch(); 
+		active.collectionView.reset(); 
 	});
 
 	$('#full-stack').on('click', function() {
 		console.log('click');
-		active.questionFilter = 'full-stack'; 
+		active.apiEndpoint = '/api/v1/questions'; 
+		active.collectionView.collection.fetch(); 
+		active.collectionView.reset(); 
 	});
-	//TODO: finish filter functions for stacks
-	active.filter = function(option) {
-		active.questionFilter = option; 
-	}
 
 	active.collection = new app.collection(); 
 	active.collectionView = new app.collectionView({
@@ -136,4 +151,5 @@ $(document).ready(function(event) {
 	$('#skip').on('click', function() {
 		active.collectionView.refresh(); 
 	}); 
+
 });	
