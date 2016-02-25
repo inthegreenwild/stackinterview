@@ -1,10 +1,11 @@
 var app = app || {}; 
 var active = active || {};
+app.public_key = <%= ENV['PUBLIC_API'] %> 
 active.apiEndpoint = '/api/v1/questions'; 
 //easy compatability with rails 
  $.ajaxSetup({
     beforeSend: function(xhr){
-      xhr.setRequestHeader('X-Api-Key', <%= ENV['PUBLIC_API'])
+      xhr.setRequestHeader('X-Api-Key', app.public_key)
     }
   }); 
 
