@@ -4,7 +4,7 @@ active.apiEndpoint = '/api/v1/questions';
 //easy compatability with rails 
  $.ajaxSetup({
     beforeSend: function(xhr){
-      xhr.setRequestHeader('X-Api-Key', '4df315e1-87a7-4050-9058-737888d4b267')
+      xhr.setRequestHeader('X-Api-Key', <%= ENV['PUBLIC_API'])
     }
   }); 
 
