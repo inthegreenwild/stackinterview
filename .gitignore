@@ -14,3 +14,5 @@
 
 .env
 .svg
+.sass-cache
+.map 

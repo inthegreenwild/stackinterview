@@ -2,6 +2,7 @@
 	window.globalkey = "<%= ENV['API_KEY'] %>";
 <% end %>  
 
+<%= javascript_include_tag 'quiz_questions' %> 
 <script type="text/template" id='quiz-template'>
   <div id="title" class="row">
 		<%%= title %>  
@@ -18,8 +19,6 @@
 		<li id="front-end"><a href="#"><%= image_tag 'frontend-icon.svg' %></a></li>
 		<li id="back-end"><%= image_tag 'backend-icon.svg' %></li>
 		<li id="full-stack"><%= image_tag 'fullstack-icon.svg' %></li>
-		<li id="wrong"><a href="#">0</a></li>
-		<li id="right"><a href="#">0</a></li>
 	</ul>
 </header>
 
@@ -38,5 +37,5 @@
   	<%= link_to 'login', login_path %> | <%= link_to 'signup', signup_path %>
 	<% end %>
 	</div>
-	<div id="skip" class="u-pull-right">skip</div>
+	<button id="skip" class="btn error-btn u-pull-right">skip</button>
 </footer>

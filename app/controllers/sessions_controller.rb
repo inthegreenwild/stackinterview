@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
   	if user && user.authenticate(params[:password])
  			#save user id inside browser cookie
  			session[:user_id] = user.id
- 			redirect_to '/'
+ 			redirect_to '/quiz_questions/'
  		else
  			@message = "Wrong username and password combination"
  			render 'new'

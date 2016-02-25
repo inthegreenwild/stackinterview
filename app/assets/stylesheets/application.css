@@ -15,32 +15,23 @@
  *= require_tree .
  *= require_self
  */
-
 body {
-	max-width: 960px;
-	margin: 0 auto;
-	text-align: center;
-}
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center; }
 
 #container {
-	width: 85%;
-	margin: 25px auto 0 auto;
-}
+  width: 85%;
+  margin: 25px auto 0 auto; }
 
 @media (min-height: 640px) {
-	#container {
-		margin-top: 50px;
-	}
-}
-
+  #container {
+    margin-top: 50px; } }
 @media (min-width: 750px) {
-	#container {
-		width: 78%;
-	}
-}
-
+  #container {
+    width: 78%; } }
 @media (min-width: 1000px) {
-	#container {
-		width: 80%;
-	}
-}
+  #container {
+    width: 80%; } }
+
+/*# sourceMappingURL=application.css.map */

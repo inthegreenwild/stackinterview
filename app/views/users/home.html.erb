@@ -1,6 +1,6 @@
 <h1>Your api key</h1>
 <h5> <%= @key %> </h3>
 
-<%= link_to 'home', root_path %> 
+<%= link_to 'home', controller: 'quiz_questions', action: 'index' %> 
 <hr>
 <%= link_to "logout", logout_path %>

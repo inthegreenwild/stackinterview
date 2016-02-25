@@ -18,7 +18,7 @@ $icon-font-phone: 2rem;
 $icon-font-phablet: 2.2rem; 
 $icon-font-tablet: 2.5rem; 
 $icon-font-laptop: 2.6rem;
-$font-default-phone: 1.5rem;
+$font-default-phone: 1.2rem;
 $font-default-tablet: 1.8rem; 
 
 @mixin anchor($color, $icons, $font) {
@@ -35,11 +35,12 @@ $font-default-tablet: 1.8rem;
 }
 
 %text-trunc {
-	overflow: scroll;
+	overflow: auto;
 }
 
 body {
 	background-color: $color-body; 
+	margin: 0 auto;
 }
 
 li {
@@ -78,8 +79,7 @@ li#full-stack {
 }
 
 #title {
-	@extend %text-trunc; 
-	font-size: 2rem;
+	font-size: 1.8rem;
 	text-align: center;
 	line-height: 1.5;
 	padding: 1%; 
@@ -91,7 +91,7 @@ li#full-stack {
 
 #choices {
 	@extend %text-trunc; 
-	max-height: 250px;
+	max-height: 350px;
 	color: $color-default-text;
 }
 
@@ -114,8 +114,6 @@ footer {
 
 #skip {
 	text-align: center;
-	width: 60px;
-	padding: 2%;
 	background-color: $color-red;
 }
 

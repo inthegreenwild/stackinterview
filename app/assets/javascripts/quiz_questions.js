@@ -4,7 +4,7 @@ active.apiEndpoint = '/api/v1/questions';
 //easy compatability with rails 
  $.ajaxSetup({
     beforeSend: function(xhr){
-      xhr.setRequestHeader('X-Api-Key', globalkey)
+      xhr.setRequestHeader('X-Api-Key', '4df315e1-87a7-4050-9058-737888d4b267')
     }
   }); 
 
@@ -57,7 +57,10 @@ app.choiceView = Backbone.View.extend({
 	verify: (function(event) {
 		
 		if (event.currentTarget.innerHTML.trim() == app.correctAnswer) {
-			active.collectionView.refresh()
+			active.collectionView.refresh();
+			} else {
+				
+				event.currentTarget.style.backgroundColor = 'tomato';
 			}
 		}
 
